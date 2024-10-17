@@ -8,6 +8,7 @@ from Core.Attack.Services import urls
 from Core.Attack.Feedback_Services import feedback_urls
 from Core.TBanner import banner
 
+SIZE = 70
 
 class OutsideBomberApp:
     def __init__(self, page: Page):
@@ -69,8 +70,8 @@ class OutsideBomberApp:
     def create_banner(self):
         '''Создание баннера'''
         return Stack([
-            Text(spans=[TextSpan('OUTSIDE', TextStyle(size=95, foreground=Paint(color=self.color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'),
-            Text(spans=[TextSpan('OUTSIDE', TextStyle(size=95, color=self.color))], font_family='Consolas')
+            Text(spans=[TextSpan('OUTSIDE', TextStyle(size=SIZE, foreground=Paint(color=self.color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'),
+            Text(spans=[TextSpan('OUTSIDE', TextStyle(size=SIZE, color=self.color))], font_family='Consolas')
         ])
 
     def add_elements(self):
@@ -116,8 +117,8 @@ class OutsideBomberApp:
     def update_banner(self):
         '''Обновление баннера и цвета элементов'''
         self.banner.controls = [
-            Text(spans=[TextSpan('OUTSIDE', TextStyle(size=95, foreground=Paint(color=self.color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'),
-            Text(spans=[TextSpan('OUTSIDE', TextStyle(size=95, color=self.color))], font_family='Consolas')
+            Text(spans=[TextSpan('OUTSIDE', TextStyle(size=SIZE, foreground=Paint(color=self.color, stroke_width=9, stroke_join='round', style='stroke')))], font_family='Consolas'),
+            Text(spans=[TextSpan('OUTSIDE', TextStyle(size=SIZE, color=self.color))], font_family='Consolas')
         ]
     
     def update_all_elements_color(self):
